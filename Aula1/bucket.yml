@@ -1,0 +1,21 @@
+Description: Criar bucket no S3
+
+Resources:
+  BucketMaggieS3:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: bucket-maggie-turma-4
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+
+
+
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: True
+        BlockPublicPolicy: True
+        IgnorePublicAcls: True
+        RestrictPublicBuckets: True
+
+
