@@ -80,7 +80,7 @@ def create_or_update_stack():
 def renderiza_template():
     logging.info(f'RENDERING JINJA')
     with open(_get_abs_path('redshift.yml.j2'), 'r') as f:
-        redshift_yaml = f.read()
+        redshift_yml = f.read()
 
     with open(_get_abs_path('config.yml'), 'r') as f:
         config = yaml.safe_load(f)
